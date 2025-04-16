@@ -25,4 +25,10 @@ public class ShowConsole {
     public void showMessage(String message){
         System.out.println(message);
     }
+
+    public String inputName() {
+        System.out.println("Ingrese un nombre:");
+        scanner.nextLine(); 
+        return scanner.nextLine();
+    }
 }

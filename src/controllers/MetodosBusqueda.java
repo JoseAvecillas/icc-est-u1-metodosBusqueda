@@ -52,13 +52,26 @@ public class MetodosBusqueda {
         }
     }
 
-    // public int showPersonByName(){
-    //     return -1;
-    // }
-    // public void showPersonByName(){
-    //     String nameTofind = ShowConsole.inputName();
-    //     int indexPerson = findPersonByName(nameTofind);
-    // }
+    public int findPersonByName(String name){
+        for (int i = 0; i < people.length; i++) {
+            if (people[i].getName().equalsIgnoreCase(name)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public void showPersonByName(){
+        String nameToFind = showConsole.inputName();
+        int indexPerson = findPersonByName(nameToFind);
+
+    if (indexPerson >= 0) {
+        showConsole.showMessage("Persona con nombre: " + nameToFind + " encontrada");
+        showConsole.showMessage(people[indexPerson].toString());
+    } else {
+        showConsole.showMessage("Persona no encontrada");
+    }
+    }
 }
 
 
