@@ -1,4 +1,5 @@
 import controllers.MetodosBusqueda;
+import controllers.MetodosBusquedaBinaria;
 import models.Person;
 
 public class App {
@@ -15,9 +16,9 @@ public class App {
         System.out.println("La lista ingresada es: ");
 
         //METODO DE BUSQUEDA
-        MetodosBusqueda mB = new MetodosBusqueda(personas);
-        
-
+       //MetodosBusqueda mB = new MetodosBusqueda(personas);
+       MetodosBusquedaBinaria mBB = new MetodosBusquedaBinaria(personas);
+       mBB.showPersonByName();
 
     }
 }

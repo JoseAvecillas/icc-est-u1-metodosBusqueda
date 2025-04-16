@@ -5,8 +5,6 @@ public class Person {
     private int code;
     private String name;
 
-    
-
     public Person(int code, String name) {
         this.code = code;
         this.name = name;
