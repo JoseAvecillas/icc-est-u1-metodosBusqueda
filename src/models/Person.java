@@ -6,12 +6,7 @@ public class Person {
     private String name;
 
     
-//     @Override
-// public String toString() {
-        
-//         return "Person [code=""]".toString()";
-// }
-// 
+
     public Person(int code, String name) {
         this.code = code;
         this.name = name;
@@ -33,5 +28,8 @@ public class Person {
         this.name = name;
     }
     
-      
+    @Override
+    public String toString() {
+        return "Codigo: " + code + ", Nombre: " + name;
+    }
 }

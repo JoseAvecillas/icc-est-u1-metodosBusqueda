@@ -44,7 +44,7 @@ public class MetodosBusqueda {
         int indexPerson = findPersonByCode(codeToFind);
 
         if (indexPerson >=0) {
-            showConsole.showMessage("Persona con codigo:" + codeToFind + "encontrada");
+            showConsole.showMessage("Persona con codigo: " +  codeToFind  +  " encontrada");
             showConsole.showMessage(people[indexPerson].toString());
 
         }else{
