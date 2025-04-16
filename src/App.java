@@ -1,18 +1,27 @@
+import controllers.MetodosBusqueda;
+import models.Person;
+
 public class App {
-    MetodosBusqueda metodosBusqueda = new MetodosBusqueda();
+    public static void main(String[] args) throws Exception {
 
-    public static void main(String[] args) {
-        App app = new App();
+        Person[] personas= new Person[7];
+        personas[0] = new Person(101, "Juan");
+        personas[1] = new Person(102, "Maria");
+        personas[2] = new Person(103, "Carlos");
+        personas[3] = new Person(104, "Ana");
+        personas[4] = new Person(105, "Luis");
+        personas[5] = new Person(106, "Sofia");
+        personas[6] = new Person(107, "Pedro");
+        System.out.println("La lista ingresada es: ");
 
-        int[] arreglo = {5, 3, 7, 1, 4};
-        int valorBuscado = 7;
+        //METODO DE BUSQUEDA
+        MetodosBusqueda mB = new MetodosBusqueda(personas);
+        
 
-        int resultado = app.metodosBusqueda.busquedaLineal(arreglo, valorBuscado);
 
-        if (resultado != -1) {
-            System.out.println("Valor encontrado en: " + resultado);
-        } else {
-            System.out.println("Valor no encontrado en el arreglo.");
-        }
     }
 }
+
+// int resultado = metodosBusqueda.busquedaLineal(arreglo, valorBuscado);
+//         metodosBusqueda.imprimirArreglo(arreglo);
+//         System.out.println("Valor encontrado en: " + resultado);
